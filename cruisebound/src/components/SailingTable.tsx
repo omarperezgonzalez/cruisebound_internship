@@ -126,21 +126,23 @@ export default function SailingTable() {
     }, [fetchData]);
 
     return (
-    <div className="w-full h-full flex flex-col gap-6 justify-center items-center py-10">
-        <div className="self-end">
-          <Select 
-            label="Sort by"
-            options={['PLF','PHF','DDLF','DDHF','DLF','DHF']}
-            selected={selectedOption}
-            onChange={setSelectedOption}
-          />
-        </div>
-        
-        {paginatedData.map((sailing: Cruise, index) => (
-            <Sailing key={index} sailing={sailing}/>
-        ))}
+    <div className="w-full h-full flex justify-center items-center py-10">
+        <div className="flex flex-col gap-6 justify-center items-center">
+          <div className="self-end">
+            <Select 
+              label="Sort by"
+              options={['PLF','PHF','DDLF','DDHF','DLF','DHF']}
+              selected={selectedOption}
+              onChange={setSelectedOption}
+            />
+          </div>
 
-        <Pagination getPageNumbers={getPageNumbers} handlePageChange={handlePageChange} totalPages={totalPages} currentPage={currentPage} itemsPerPage={itemsPerPage}  totalLength={results.length} />
+          {paginatedData.map((sailing: Cruise, index) => (
+                <Sailing key={index} sailing={sailing}/>
+            ))}
+
+          <Pagination getPageNumbers={getPageNumbers} handlePageChange={handlePageChange} totalPages={totalPages} currentPage={currentPage} itemsPerPage={itemsPerPage}  totalLength={results.length} />
+        </div>
     </div>
     );
   }

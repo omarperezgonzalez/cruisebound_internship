@@ -12,7 +12,7 @@ interface SailingProps {
 
 export default function Sailing({ sailing } : SailingProps){
     return(
-        <div className="2xl:w-1/2 lg:w-3/5 md:w-3/4 w-5/6 h-120 xl:h-50 flex xl:flex-row flex-col bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="2xl:w-[50vw] lg:w-[60vw] md:[75vw] w-[85vw] h-120 xl:h-50 flex xl:flex-row flex-col bg-white rounded-2xl shadow-xl overflow-hidden">
             {/* Image Section */}
             <div className="relative xl:w-80 w-full h-50 flex-shrink-0">
               <Image 
