@@ -99,7 +99,7 @@ export default function Sailing({ sailing } : SailingProps){
         </div>
         
         {/* Price and Button Section */}
-        <div className="h-1/3 flex justify-end gap-5 bg-stone-100 px-5 py-2.5">  
+        <div className="xl:h-1/3 h-1/4 flex justify-end gap-5 bg-stone-100 px-5 py-2.5">  
             
           {/* Pricing */}
           <div className="text-right">
