@@ -60,7 +60,7 @@ export default function Select({ options, selected, onChange, label } : SelectPr
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative w-64">
+    <div className="relative w-48">
       {label && <label className="block mb-1 text-sm font-medium text-right">{label}</label>}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -77,7 +77,7 @@ export default function Select({ options, selected, onChange, label } : SelectPr
 
       {isOpen && (
         <ul
-          className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-auto"
+          className="text-sm absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-auto"
         >
           {options.map((option : string) => (
             <li
