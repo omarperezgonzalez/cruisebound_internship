@@ -7,9 +7,11 @@ import axios from 'axios';
 //Import Next.js request and response utilities for server-side API handling
 import { NextRequest, NextResponse } from 'next/server';
 
+const apiUrl = process.env.API_URL;
+
 //Create an Axios instance with a predefined base URL and headers
 const api = axios.create({
-    baseURL: "https://sandbox.cruisebound-qa.com/",
+    baseURL: apiUrl,
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
