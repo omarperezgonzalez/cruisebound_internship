@@ -24,18 +24,19 @@ export interface CruiseShipLine {
     name : string,
 }
 
-// Remove the external API configuration and use local API routes
+// Create an Axios instance configured for local API routes
 const api = axios.create({
-    baseURL: "/api/", // Points to your local API routes
+    baseURL: "/api/", // Base URL pointing to backend local API endpoints
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
     }
 });
 
+// Function to fetch cruise data from the backend
 export const getData = async (): Promise<Cruise[]> => {
     try {
-        const { data } = await api.get('sailings'); // This will call /api/sailings
+        const { data } = await api.get('sailings'); //This will call /api/sailings
         return data.results;
     } catch (error) {
         if (error instanceof AxiosError) {

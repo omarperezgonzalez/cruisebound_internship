@@ -5,9 +5,13 @@ export function useSearch(results: Cruise[]) {
   const [searchInput, setSearchInput] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
+  //Memorized filtered results based on the searchTerm and results
+  //useMemo prevents recalculating filteredResults unless results or searchTerm changes
   const filteredResults = useMemo(() => {
+    //Return if empty
     if (!searchTerm.trim()) return results;
     
+    //Filter cruises based on searchTerm
     return results.filter((cruise) => {
       const searchLower = searchTerm.toLowerCase();
       return (
@@ -21,6 +25,7 @@ export function useSearch(results: Cruise[]) {
     });
   }, [results, searchTerm]);
 
+  //Updates the input field's state on every keystroke
   const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
   };
@@ -29,12 +34,14 @@ export function useSearch(results: Cruise[]) {
     setSearchTerm(searchInput);
   };
   
+  //Search on enter key pressed
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       handleSearch();
     }
   };
   
+  //Clears search
   const clearSearch = () => {
     setSearchInput("");
     setSearchTerm("");

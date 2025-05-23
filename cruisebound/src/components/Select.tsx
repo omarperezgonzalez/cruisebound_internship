@@ -10,6 +10,7 @@ interface SelectProps {
     label : string,
 }
 
+//Mapping option keys to display the sorting select information
 const labels = {
     "PLF" : {
         title: "Price",
@@ -60,8 +61,10 @@ export default function Select({ options, selected, onChange, label } : SelectPr
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative w-48">
+    <div className="relative w-4">
       {label && <label className="block mb-1 text-sm font-medium text-right">{label}</label>}
+      
+      {/* Dropdown button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full bg-white border border-gray-300 rounded-lg shadow-sm px-4 py-2 text-left cursor-pointer flex justify-between items-center"
@@ -75,6 +78,7 @@ export default function Select({ options, selected, onChange, label } : SelectPr
         <ChevronDown className="w-5 h-5 text-gray-500" />
       </button>
 
+      {/* Dropdown options list, shown when open */}
       {isOpen && (
         <ul
           className="text-sm absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-auto"
@@ -97,4 +101,4 @@ export default function Select({ options, selected, onChange, label } : SelectPr
       )}
     </div>
   );
-}
+};
