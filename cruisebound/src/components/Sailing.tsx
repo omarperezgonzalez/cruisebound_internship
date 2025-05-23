@@ -10,8 +10,7 @@ interface SailingProps {
 
 export default function Sailing({ sailing } : SailingProps){
   return(
-    <div className="2xl:w-[50vw] lg:w-[60vw] md:[75vw] w-[85vw] h-120 xl:h-50 flex xl:flex-row flex-col bg-white rounded-2xl shadow-xl overflow-hidden">
-        
+    <div className="2xl:w-[50vw] lg:w-[60vw] md:[75vw] w-[85vw] h-120 xl:h-50 flex xl:flex-row flex-col bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-101 hover:shadow-xl hover:-translate-y-1"> 
       {/* Ship image with date overlay */}
       <div className="relative xl:w-80 w-full h-50 flex-shrink-0">
         <Image 
