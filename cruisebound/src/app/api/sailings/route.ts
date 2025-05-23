@@ -1,3 +1,7 @@
+//Now we can access the API without CORS related issues
+//Creates a local server that way it can send and receive 
+//requests with no CORS issues.
+
 //Import Axios for making HTTP requests
 import axios from 'axios';
 //Import Next.js request and response utilities for server-side API handling
