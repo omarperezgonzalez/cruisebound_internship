@@ -4,7 +4,7 @@ import SailingTable from "@/components/SailingTable";
 export default function Home() {
   return (
     <main className="w-full h-full">
-      <div className="h-dvh w-dw">
+      <div className="h-[100dv] w-[100dw]">
         <HeroSection />
       </div>
 
