@@ -7,7 +7,7 @@ export default function HeroSection() {
             {/* Background sea image */}
             <div className="absolute inset-0">
                 <img 
-                    src="/img/sea.webp"
+                    src="/img/Sea.webp"
                     alt="Sea" 
                     className="w-full h-full object-cover"
                     style={{objectPosition: '47.5% center'}}
@@ -17,7 +17,7 @@ export default function HeroSection() {
             {/* Boat image overlay */}
             <div className="absolute inset-0 z-10">
                 <img 
-                    src="/img/boat.webp"
+                    src="/img/Boat.webp"
                     alt="Boat" 
                     className="w-full h-full object-cover "
                     style={{objectPosition: '47.5% center'}}
