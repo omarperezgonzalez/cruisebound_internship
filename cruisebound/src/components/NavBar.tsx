@@ -6,19 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react'
 
 export default function Navbar() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
-    }
-    
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    return () => window.removeEventListener('resize', checkScreenSize);
-  }, [])
-  
+
   return (
     <header 
       className={"w-full text-white z-[999] gap-15 absolute left-0 top-0 p-10 flex flex-row justify-between"}
